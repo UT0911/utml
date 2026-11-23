@@ -39,7 +39,7 @@ async function showArticle(index) {
   }
 
   try {
-    const response = await fetch(`posts/${post.file}`);
+    const response = await fetch(`../posts/${post.file}`);
 
     if (!response.ok) {
       throw new Error("記事を読み込めませんでした。");

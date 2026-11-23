@@ -41,3 +41,8 @@ a {
   letter-spacing: 2px;
   margin-bottom: 15px;
 }
+
+h1 span,
+h2 span {
+  color: var(--primary);
+}

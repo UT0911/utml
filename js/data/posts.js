@@ -1,0 +1,11 @@
+// 記事一覧
+// 新しい記事を追加したら、ここにも登録する
+const posts = [
+  {
+    title: "ホームページを作りました",
+    date: "2026-11-23",
+    category: "test",
+    description: "ホームページができるまで",
+    file: "madeHomepage.md",
+  },
+];

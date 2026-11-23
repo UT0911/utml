@@ -1,5 +1,3 @@
-"use strict";
-
 // プロフィール情報
 const profile = atcoderData.profile;
 

@@ -1,0 +1,38 @@
+const accounts = [
+  {
+    name: "GitHub",
+    category: "Development",
+    username: "UT0911",
+    description: "制作したプログラムやソースコード",
+    url: "https://github.com/UT0911",
+    detailPage: null,
+    icon: "https://cdn.simpleicons.org/github/FFFFFF",
+  },
+  {
+    name: "X",
+    category: "SNS",
+    username: "UtCoder_UBC911",
+    description: "技術系の投稿",
+    url: "https://x.com/UtCoder_UBC911",
+    detailPage: null,
+    icon: "https://cdn.simpleicons.org/x/FFFFFF",
+  },
+  {
+    name: "AtCoder",
+    category: "Competitive Programming",
+    username: "UT0911",
+    description: "競技プログラミングの活動記録",
+    url: "https://atcoder.jp/users/UT0911",
+    detailPage: null,
+    icon: "../../images/atcoder_icon.png",
+  },
+  {
+    name: "YouTube",
+    category: "Video",
+    username: "UT0911",
+    description: "解説動画など",
+    url: "https://www.youtube.com/@UT0911",
+    detailPage: null,
+    icon: "https://cdn.simpleicons.org/youtube/_/FFFFFF",
+  },
+];

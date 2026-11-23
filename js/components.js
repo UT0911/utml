@@ -1,5 +1,3 @@
-"use strict";
-
 // components.js の場所からプロジェクトのルートを取得
 const componentScript = document.currentScript;
 const projectRoot = new URL("../", componentScript.src);

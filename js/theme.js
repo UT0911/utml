@@ -1,5 +1,3 @@
-"use strict";
-
 function initializeTheme() {
   const button = document.getElementById("theme-toggle");
 

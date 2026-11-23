@@ -1,5 +1,3 @@
-"use strict";
-
 const atcoderData = {
   username: "your_username",
 
