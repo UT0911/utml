@@ -1,0 +1,167 @@
+/* ブログ全体 */
+.blog-container {
+  width: min(900px, 90%);
+  margin: 100px auto;
+  min-height: 70vh;
+}
+
+.page-heading {
+  margin-bottom: 60px;
+}
+
+.page-heading h1 {
+  margin: 10px 0;
+}
+
+.page-heading h1 span {
+  color: var(--primary);
+}
+
+.page-heading > p:last-child {
+  color: var(--sub-text);
+}
+
+.section-label {
+  color: var(--primary);
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+}
+
+.blog-section-title {
+  font-size: 1.4rem;
+  margin-bottom: 24px;
+}
+
+/* 記事一覧 */
+.article-list {
+  display: grid;
+  gap: 16px;
+}
+
+.article-card {
+  display: block;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  text-decoration: none;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.article-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.article-card h3 {
+  margin: 8px 0;
+  font-size: 1.2rem;
+}
+
+.article-card p:last-child {
+  color: var(--sub-text);
+  margin-bottom: 0;
+}
+
+.article-meta {
+  color: var(--primary);
+  font-size: 0.8rem;
+}
+
+/* 戻るボタン */
+.back-button {
+  margin-bottom: 32px;
+  padding: 10px 16px;
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background: var(--primary);
+  color: var(--bg);
+}
+
+/* Markdown本文 */
+.markdown-content {
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  margin: 2em 0 0.8em;
+  line-height: 1.4;
+}
+
+.markdown-content h1 {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.markdown-content h2 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+}
+
+.markdown-content p {
+  margin: 1em 0;
+}
+
+.markdown-content a {
+  color: var(--primary);
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  padding-left: 1.5em;
+}
+
+.markdown-content pre {
+  overflow-x: auto;
+  padding: 18px;
+  background: #111318;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.markdown-content code {
+  font-family: Consolas, monospace;
+}
+
+.markdown-content :not(pre) > code {
+  padding: 2px 5px;
+  background: var(--surface-light);
+  border-radius: 4px;
+}
+
+.markdown-content img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.markdown-content blockquote {
+  margin: 1.5em 0;
+  padding: 8px 18px;
+  border-left: 3px solid var(--primary);
+  color: var(--sub-text);
+  background: var(--surface);
+}
+
+/* スマートフォン */
+@media (max-width: 600px) {
+  .blog-container {
+    margin: 60px auto;
+  }
+
+  .article-card {
+    padding: 18px;
+  }
+}

@@ -1,0 +1,56 @@
+/* 制作物一覧 */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.work-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.work-image {
+  height: 190px;
+  display: grid;
+  place-items: center;
+  background: #29394a;
+}
+
+.work-image.second {
+  background: #303944;
+}
+
+.work-image.third {
+  background: #3b3545;
+}
+
+.work-image span {
+  color: #e2e6eb;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.work-info {
+  padding: 24px;
+}
+
+.work-info h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.work-info p {
+  color: var(--sub-text);
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  color: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  font-size: 11px;
+}

@@ -1,0 +1,75 @@
+/* スキル詳細ページ */
+.skill-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.skill-detail-card {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 25px 30px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.skill-detail-card:hover {
+  border-color: var(--primary-dark);
+  transform: translateX(4px);
+}
+
+.skill-icon {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-light);
+  border-radius: 8px;
+}
+
+.skill-icon img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.skill-info {
+  flex: 1;
+}
+
+.skill-info h2 {
+  font-size: 20px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.skill-info p {
+  color: var(--sub-text);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* スマートフォン */
+@media (max-width: 700px) {
+  .skill-detail-card {
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .skill-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .skill-icon img {
+    width: 32px;
+    height: 32px;
+  }
+}

@@ -1,0 +1,26 @@
+/* ダークモード */
+:root,
+[data-theme="dark"] {
+  --bg: #17191d;
+  --surface: #202329;
+  --surface-light: #292d34;
+  --text: #f0f0f0;
+  --sub-text: #aeb1b8;
+  --primary: #8ad8e4;
+  --primary-light: #c0f0f3;
+  --primary-dark: #559eaa;
+  --border: #393d44;
+}
+
+/* ライトモード */
+[data-theme="light"] {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --surface-light: #e9edf0;
+  --text: #222831;
+  --sub-text: #626b76;
+  --primary: #287e8c;
+  --primary-light: #c0f0f3;
+  --primary-dark: #1c6470;
+  --border: #d9dee3;
+}

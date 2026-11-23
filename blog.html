@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="description" content="ゆーてぃーのブログページ">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages/blog.css">
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+
+    <main class="blog-container">
+        <section class="page-heading">
+            <p class="section-label">MY JOURNAL</p>
+            <h1>BLOG<span>.</span></h1>
+            <p>学んだことや、開発の記録を残しています。</p>
+        </section>
+
+        <section id="blog-list">
+            <h2 class="blog-section-title">Articles</h2>
+            <div id="articles" class="article-list">
+                <p>記事を読み込んでいます...</p>
+            </div>
+        </section>
+
+        <article id="blog-detail" hidden>
+            <button id="back-to-list" class="back-button">
+                ← 記事一覧に戻る
+            </button>
+            <div id="article-content" class="markdown-content"></div>
+        </article>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- Markdown表示用ライブラリ -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/posts.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+
+</html>

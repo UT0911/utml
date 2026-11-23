@@ -1,0 +1,173 @@
+/* AtCoderページ */
+.atcoder-container {
+  width: min(1000px, 90%);
+  margin: 70px auto 100px;
+}
+
+.atcoder-heading {
+  margin: 45px 0;
+}
+
+.atcoder-heading h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin: 10px 0;
+}
+
+.atcoder-heading h1 span,
+.atcoder-section h2 span {
+  color: var(--primary);
+}
+
+.atcoder-username {
+  color: var(--sub-text);
+  margin-bottom: 12px;
+}
+
+.atcoder-external-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.atcoder-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 70px;
+}
+
+.atcoder-stat {
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.atcoder-stat p {
+  color: var(--sub-text);
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+.atcoder-stat strong {
+  color: var(--primary);
+  font-size: 1.8rem;
+}
+
+.atcoder-section {
+  margin-bottom: 70px;
+}
+
+.atcoder-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.atcoder-description {
+  color: var(--sub-text);
+  margin-bottom: 24px;
+}
+
+.rating-chart {
+  position: relative;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.rating-chart svg {
+  display: block;
+  width: 100%;
+  height: 240px;
+  overflow: visible;
+}
+
+.chart-empty {
+  color: var(--sub-text);
+  text-align: center;
+  padding: 20px;
+}
+
+.contest-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.contest-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.contest-table th,
+.contest-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.contest-table th {
+  color: var(--primary);
+  background: var(--surface);
+  font-weight: normal;
+}
+
+.contest-table td {
+  background: var(--surface);
+}
+
+.contest-table tr:last-child td {
+  border-bottom: none;
+}
+
+.atcoder-introduction {
+  color: var(--sub-text);
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+
+.atcoder-section h3 {
+  margin-bottom: 16px;
+}
+
+.specialty-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.specialty-tag {
+  padding: 8px 14px;
+  color: var(--primary);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+/* スマートフォン */
+@media (max-width: 700px) {
+  .atcoder-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .atcoder-stat {
+    padding: 18px;
+  }
+
+  .atcoder-stat strong {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .atcoder-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .atcoder-stat {
+    padding: 14px;
+  }
+}

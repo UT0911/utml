@@ -1,0 +1,42 @@
+/* 404ページ */
+.error-page {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.error-code {
+  font-size: clamp(100px, 20vw, 180px);
+  font-weight: bold;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.error-page h1 {
+  font-size: 24px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.error-page p:not(.error-code) {
+  color: var(--sub-text);
+  margin-bottom: 30px;
+}
+
+.error-link {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  transition: 0.2s;
+}
+
+.error-link:hover {
+  background: var(--primary);
+  color: var(--bg);
+}

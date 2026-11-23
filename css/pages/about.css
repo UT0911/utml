@@ -1,0 +1,15 @@
+/* ページ内のタイムライン */
+.timeline {
+  border-left: 2px solid var(--primary);
+  border-radius: 0;
+}
+
+.timeline-item {
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline-item span {
+  color: var(--primary);
+  font-weight: 600;
+}

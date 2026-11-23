@@ -1,0 +1,19 @@
+/* =================================
+   フッター
+================================= */
+
+.footer {
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.footer p {
+  color: var(--sub-text);
+  font-size: 12px;
+}
+
+.footer p:last-child {
+  margin-top: 8px;
+}

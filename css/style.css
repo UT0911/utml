@@ -1,0 +1,18 @@
+/* =================================
+   共通CSSの読み込み
+================================= */
+
+/* 色・テーマ設定 */
+@import url("variables.css");
+
+/* 全ページ共通 */
+@import url("common.css");
+
+/* ヘッダー */
+@import url("header.css");
+
+/* フッター */
+@import url("footer.css");
+
+/* 全ページ共通のレスポンシブ対応 */
+@import url("responsive.css");
