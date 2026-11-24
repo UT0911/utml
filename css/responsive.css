@@ -17,7 +17,7 @@
   }
 
   .page-hero {
-    padding: 75px 8% 45px;
+    padding: 75px 0 45px;
   }
 }
 
@@ -29,11 +29,7 @@
   }
 
   .page-hero {
-    padding: 60px 6% 35px;
-  }
-
-  .page-hero h1 {
-    font-size: 26px;
+    padding: 60px 0 35px;
   }
 
   .section-heading h2 {
@@ -86,7 +82,7 @@
   }
 
   .page-hero {
-    padding: 50px 5% 30px;
+    padding: 50px 0 30px;
   }
 
   .hero {
