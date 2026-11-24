@@ -1,0 +1,116 @@
+/* アカウント一覧 */
+.x-account-list {
+  width: 100%;
+  max-width: 800px;
+  margin: 32px auto;
+  border-top: 1px solid var(--border);
+}
+
+/* アカウント1件 */
+.x-account-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 16px;
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.2s ease;
+}
+
+.x-account-card:hover {
+  background-color: var(--surface-light);
+}
+
+/* プロフィール画像 */
+.x-account-avatar {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* プロフィール情報 */
+.x-account-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.x-account-name {
+  display: inline-block;
+  color: var(--text);
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.x-account-name:hover {
+  text-decoration: underline;
+}
+
+.x-account-username {
+  margin-top: 2px;
+  color: var(--sub-text);
+  font-size: 14px;
+}
+
+.x-account-description {
+  margin: 8px 0 0;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+/* プロフィールボタン */
+.x-account-button {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text);
+  background-color: var(--surface);
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.x-account-button:hover {
+  background-color: var(--surface-light);
+}
+
+/* スマートフォン */
+@media (max-width: 600px) {
+  .x-account-card {
+    gap: 12px;
+    padding: 16px 10px;
+  }
+
+  .x-account-avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .x-account-button {
+    padding: 7px 11px;
+    font-size: 12px;
+  }
+
+  .x-account-description {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  .x-account-card {
+    flex-wrap: wrap;
+  }
+
+  .x-account-info {
+    flex-basis: calc(100% - 64px);
+  }
+
+  .x-account-button {
+    margin-left: auto;
+  }
+}

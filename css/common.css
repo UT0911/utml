@@ -46,3 +46,13 @@ h1 span,
 h2 span {
   color: var(--primary);
 }
+
+.back-button {
+  color: var(--primary);
+}
+
+.section-label {
+  color: var(--primary);
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+}

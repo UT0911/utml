@@ -35,7 +35,9 @@ function displayAccounts() {
     // ユーザー名
     const username = document.createElement("p");
     username.className = "account-username";
-    username.textContent = `@${account.username}`;
+    if (`${account.username}` != "") {
+      username.textContent = `@${account.username}`;
+    }
 
     // 説明
     const description = document.createElement("p");

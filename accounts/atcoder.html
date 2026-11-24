@@ -15,89 +15,90 @@
 
     <div id="header"></div>
 
-
     <main class="atcoder-container">
 
-        <a href="../accounts.html" class="back-button">
+        <a href="../pages/accounts.html" class="back-button">
             ← Accounts
         </a>
 
-        <section class="atcoder-heading">
-            <p class="section-label">COMPETITIVE PROGRAMMING</p>
-            <h1>AtCoder<span>.</span></h1>
-
-            <p id="atcoder-username" class="atcoder-username">
-                @username
-            </p>
-
-            <a id="atcoder-profile-link" href="#" target="_blank" rel="noopener noreferrer"
-                class="atcoder-external-link">
-                AtCoder Profile ↗
-            </a>
-        </section>
-
-        <section class="atcoder-stats">
-            <div class="atcoder-stat">
-                <p>Current Rating</p>
-                <strong id="current-rating">-</strong>
-            </div>
-
-            <div class="atcoder-stat">
-                <p>Highest Rating</p>
-                <strong id="highest-rating">-</strong>
-            </div>
-
-            <div class="atcoder-stat">
-                <p>Rank</p>
-                <strong id="atcoder-rank">-</strong>
-            </div>
-
-            <div class="atcoder-stat">
-                <p>Contests</p>
-                <strong id="contest-count">-</strong>
-            </div>
+        <section class="page-hero">
+            <p class="eyebrow">06 / ATCODER</p>
+            <h1>AtCoder<span class="gradient-text">.</span></h1>
+            <p>競技プログラミングの成績を紹介します。</p>
         </section>
 
         <section class="atcoder-section">
-            <h2>Rating History<span>.</span></h2>
-            <p class="atcoder-description">
-                コンテスト参加によるレートの推移
-            </p>
+            <div class="atcoder-rating-panels">
 
-            <div class="rating-chart">
-                <svg id="rating-chart" viewBox="0 0 700 240" preserveAspectRatio="none" role="img"
-                    aria-label="AtCoder rating history chart">
-                </svg>
-                <p id="chart-empty" class="chart-empty">
-                    レート履歴がまだ登録されていません。
-                </p>
+                <!-- Algorithm -->
+                <div class="atcoder-profile">
+                    <div class="atcoder-profile-header">
+                        <h2>Algorithm</h2>
+                        <a href="https://atcoder.jp/users/UT0911" target="_blank" rel="noopener noreferrer"
+                            class="atcoder-link">
+                            Profile →
+                        </a>
+                    </div>
+
+                    <div id="algorithm-status" class="atcoder-status">
+                        Loading...
+                    </div>
+
+                    <div id="algorithm-stats" class="atcoder-stats" hidden>
+                        <div class="atcoder-stat-card">
+                            <p>Current Rating</p>
+                            <strong id="algorithm-current">---</strong>
+                        </div>
+                        <div class="atcoder-stat-card">
+                            <p>Highest Rating</p>
+                            <strong id="algorithm-highest">---</strong>
+                        </div>
+                        <div class="atcoder-stat-card">
+                            <p>Rated Contests</p>
+                            <strong id="algorithm-count">---</strong>
+                        </div>
+                        <div class="atcoder-stat-card">
+                            <p>Last Contest</p>
+                            <strong id="algorithm-last">---</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Heuristic -->
+                <div class="atcoder-profile">
+                    <div class="atcoder-profile-header">
+                        <h2>Heuristic</h2>
+                        <a href="https://atcoder.jp/users/UT0911?contestType=heuristic" target="_blank"
+                            rel="noopener noreferrer" class="atcoder-link">
+                            Profile →
+                        </a>
+                    </div>
+
+                    <div id="heuristic-status" class="atcoder-status">
+                        Loading...
+                    </div>
+
+                    <div id="heuristic-stats" class="atcoder-stats" hidden>
+                        <div class="atcoder-stat-card">
+                            <p>Current Rating</p>
+                            <strong id="heuristic-current">---</strong>
+                        </div>
+                        <div class="atcoder-stat-card">
+                            <p>Highest Rating</p>
+                            <strong id="heuristic-highest">---</strong>
+                        </div>
+                        <div class="atcoder-stat-card">
+                            <p>Rated Contests</p>
+                            <strong id="heuristic-count">---</strong>
+                        </div>
+                        <div class="atcoder-stat-card">
+                            <p>Last Contest</p>
+                            <strong id="heuristic-last">---</strong>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </section>
-
-        <section class="atcoder-section">
-            <h2>Contest History<span>.</span></h2>
-
-            <div class="contest-table-wrapper">
-                <table class="contest-table">
-                    <thead>
-                        <tr>
-                            <th>Contest</th>
-                            <th>Date</th>
-                            <th>Rating</th>
-                        </tr>
-                    </thead>
-                    <tbody id="contest-history">
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <section class="atcoder-section">
-            <h2>About<span>.</span></h2>
-            <p id="atcoder-introduction" class="atcoder-introduction"></p>
-
-            <h3>Specialties</h3>
-            <div id="atcoder-specialties" class="specialty-list"></div>
         </section>
 
     </main>
@@ -106,7 +107,7 @@
 
     <script src="../js/script.js"></script>
     <script src="../js/theme.js"></script>
-    <script src="js/components.js"></script>
+    <script src="../js/components.js"></script>
     <script src="../js/data/atcoder-data.js"></script>
     <script src="../js/atcoder.js"></script>
 

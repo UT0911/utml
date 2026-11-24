@@ -1,173 +1,176 @@
-/* AtCoderページ */
-.atcoder-container {
-  width: min(1000px, 90%);
-  margin: 70px auto 100px;
+/* AtCoder */
+.atcoder-section {
+  max-width: 900px;
+  margin: 40px auto;
 }
 
-.atcoder-heading {
-  margin: 45px 0;
+.atcoder-profile {
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
 }
 
-.atcoder-heading h1 {
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  margin: 10px 0;
+.atcoder-profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
 }
 
-.atcoder-heading h1 span,
-.atcoder-section h2 span {
-  color: var(--primary);
-}
-
-.atcoder-username {
+.atcoder-label {
+  margin: 0 0 8px;
   color: var(--sub-text);
-  margin-bottom: 12px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
 }
 
-.atcoder-external-link {
+.atcoder-profile-header h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: 24px;
+}
+
+.atcoder-link {
   color: var(--primary);
+  font-size: 14px;
   text-decoration: none;
-  font-size: 0.9rem;
+}
+
+.atcoder-link:hover {
+  text-decoration: underline;
+}
+
+.atcoder-status {
+  padding: 24px 0;
+  color: var(--sub-text);
+  font-size: 14px;
 }
 
 .atcoder-stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-  margin-bottom: 70px;
+  padding-top: 24px;
 }
 
-.atcoder-stat {
-  padding: 24px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 10px;
+.atcoder-stats[hidden] {
+  display: none;
 }
 
-.atcoder-stat p {
-  color: var(--sub-text);
-  font-size: 0.85rem;
-  margin-bottom: 12px;
-}
-
-.atcoder-stat strong {
-  color: var(--primary);
-  font-size: 1.8rem;
-}
-
-.atcoder-section {
-  margin-bottom: 70px;
-}
-
-.atcoder-section h2 {
-  font-size: 1.6rem;
-  margin-bottom: 12px;
-}
-
-.atcoder-description {
-  color: var(--sub-text);
-  margin-bottom: 24px;
-}
-
-.rating-chart {
-  position: relative;
+.atcoder-stat-card {
   padding: 20px;
-  background: var(--surface);
+  background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
-.rating-chart svg {
-  display: block;
-  width: 100%;
-  height: 240px;
-  overflow: visible;
-}
-
-.chart-empty {
+.atcoder-stat-card p {
+  margin: 0 0 12px;
   color: var(--sub-text);
-  text-align: center;
-  padding: 20px;
+  font-size: 13px;
 }
 
-.contest-table-wrapper {
-  overflow-x: auto;
-  border: 1px solid var(--border);
-  border-radius: 10px;
+.atcoder-stat-card strong {
+  color: var(--text);
+  font-size: 28px;
+  font-weight: 700;
 }
 
-.contest-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
+/* AtCoder Rating Colors */
+.rating-value.rating-gray {
+  color: #808080;
 }
 
-.contest-table th,
-.contest-table td {
-  padding: 16px;
-  border-bottom: 1px solid var(--border);
+.rating-value.rating-brown {
+  color: #804000;
 }
 
-.contest-table th {
-  color: var(--primary);
-  background: var(--surface);
-  font-weight: normal;
+.rating-value.rating-green {
+  color: #008000;
 }
 
-.contest-table td {
-  background: var(--surface);
+.rating-value.rating-cyan {
+  color: #00c0c0;
 }
 
-.contest-table tr:last-child td {
-  border-bottom: none;
+.rating-value.rating-blue {
+  color: #0000ff;
 }
 
-.atcoder-introduction {
-  color: var(--sub-text);
-  line-height: 1.9;
-  margin-bottom: 30px;
+.rating-value.rating-yellow {
+  color: #c0a000;
 }
 
-.atcoder-section h3 {
-  margin-bottom: 16px;
+.rating-value.rating-orange {
+  color: #ff8000;
 }
 
-.specialty-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.rating-value.rating-red {
+  color: #ff0000;
 }
 
-.specialty-tag {
-  padding: 8px 14px;
-  color: var(--primary);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  font-size: 0.85rem;
+/* スマートフォン */
+@media (max-width: 600px) {
+  .atcoder-profile {
+    padding: 20px 16px;
+  }
+
+  .atcoder-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .atcoder-stat-card {
+    padding: 16px;
+  }
+
+  .atcoder-stat-card strong {
+    font-size: 24px;
+  }
+
+  .atcoder-profile-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* Algorithm / Heuristic 横並び */
+.atcoder-rating-panels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.atcoder-rating-panels .atcoder-profile {
+  min-width: 0;
+}
+
+.atcoder-rating-panels .atcoder-profile-header h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: 22px;
+}
+
+.atcoder-rating-panels .atcoder-stats {
+  grid-template-columns: 1fr;
+}
+
+.atcoder-rating-panels .atcoder-stat-card strong {
+  font-size: 26px;
 }
 
 /* スマートフォン */
 @media (max-width: 700px) {
-  .atcoder-stats {
+  .atcoder-rating-panels {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .atcoder-rating-panels .atcoder-stats {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .atcoder-stat {
-    padding: 18px;
-  }
-
-  .atcoder-stat strong {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .atcoder-stats {
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
-
-  .atcoder-stat {
-    padding: 14px;
   }
 }
