@@ -33,6 +33,18 @@ a {
   margin: 10px 0;
 }
 
+/* 下層ページ共通のヒーロー */
+.page-hero {
+  width: min(1000px, 90%);
+  margin: 0 auto;
+  padding: 88px 0 48px;
+}
+
+.page-hero > p:last-child {
+  color: var(--sub-text);
+  font-size: 14px;
+}
+
 /* ページ共通の小見出し */
 .eyebrow {
   color: var(--primary);
