@@ -1,3 +1,7 @@
+.about-page-hero {
+  text-align: center;
+}
+
 /* ページ内のタイムライン */
 .timeline {
   border-left: 2px solid var(--primary);
