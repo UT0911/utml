@@ -15,6 +15,7 @@ async function main() {
     headers: {
       "User-Agent": "UTML-AtCoder-Rating/1.0",
     },
+    signal: AbortSignal.timeout(15_000),
   });
 
   if (!response.ok) {
