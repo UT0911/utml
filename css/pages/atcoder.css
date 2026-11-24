@@ -1,4 +1,19 @@
 /* AtCoder */
+.atcoder-container > .back-button {
+  display: block;
+  width: min(1000px, 90%);
+  margin: 28px auto 0;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.atcoder-container > .back-button:hover {
+  background: var(--surface);
+  border-color: var(--primary);
+}
+
 .atcoder-section {
   max-width: 900px;
   margin: 40px auto;
@@ -80,35 +95,35 @@
 }
 
 /* AtCoder Rating Colors */
-.rating-value.rating-gray {
+.atcoder-stat-card strong.rating-gray {
   color: #808080;
 }
 
-.rating-value.rating-brown {
+.atcoder-stat-card strong.rating-brown {
   color: #804000;
 }
 
-.rating-value.rating-green {
+.atcoder-stat-card strong.rating-green {
   color: #008000;
 }
 
-.rating-value.rating-cyan {
+.atcoder-stat-card strong.rating-cyan {
   color: #00c0c0;
 }
 
-.rating-value.rating-blue {
+.atcoder-stat-card strong.rating-blue {
   color: #0000ff;
 }
 
-.rating-value.rating-yellow {
+.atcoder-stat-card strong.rating-yellow {
   color: #c0a000;
 }
 
-.rating-value.rating-orange {
+.atcoder-stat-card strong.rating-orange {
   color: #ff8000;
 }
 
-.rating-value.rating-red {
+.atcoder-stat-card strong.rating-red {
   color: #ff0000;
 }
 
