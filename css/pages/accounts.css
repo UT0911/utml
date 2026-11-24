@@ -1,7 +1,12 @@
 /* アカウント一覧 */
 .accounts-container {
   width: min(1000px, 90%);
-  margin: 100px auto;
+  margin: 0 auto;
+}
+
+/* 共通ページタイトルの幅を親要素に合わせる */
+.accounts-container .page-hero {
+  width: 100%;
 }
 
 .account-section {
@@ -86,11 +91,11 @@
 
 /* スマートフォン */
 @media (max-width: 600px) {
-  .accounts-container {
-    margin: 60px auto;
-  }
-
   .account-grid {
     grid-template-columns: 1fr;
+  }
+
+  .account-section {
+    margin-bottom: 50px;
   }
 }
