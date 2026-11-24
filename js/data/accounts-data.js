@@ -24,7 +24,7 @@ const accounts = [
     username: "",
     description: "技術系の投稿",
     url: "",
-    detailPage: "../../accounts/x-accounts.html",
+    detailPage: "../accounts/x-accounts.html",
     icon: "https://cdn.simpleicons.org/x/FFFFFF",
   },
   {
@@ -33,8 +33,8 @@ const accounts = [
     username: "",
     description: "競技プログラミングの活動記録",
     url: "",
-    detailPage: "../../accounts/atcoder.html",
-    icon: "../../images/atcoder_icon.png",
+    detailPage: "../accounts/atcoder.html",
+    icon: "../images/atcoder_icon.png",
   },
   {
     name: "YouTube",
