@@ -185,9 +185,21 @@
 .markdown-content pre {
   overflow-x: auto;
   padding: 18px;
-  background: #111318;
+  background: #0d1117;
   border: 1px solid var(--border);
   border-radius: 8px;
+}
+
+.markdown-content pre code {
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.markdown-content pre code.hljs {
+  background: transparent;
 }
 
 .markdown-content code {
