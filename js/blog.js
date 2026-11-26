@@ -40,6 +40,12 @@ async function showArticle(index) {
     return;
   }
 
+  // 記事を開いたときは、ブログ一覧ページの説明部分を隠す
+  const pageHeading = document.querySelector(".blog-container > .page-heading");
+  if (pageHeading) {
+    pageHeading.hidden = true;
+  }
+
   try {
     const response = await fetch(`../posts/${post.file}`);
 
