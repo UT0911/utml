@@ -93,6 +93,25 @@ async function showArticle(index) {
       }
 
       image.src = `../posts/${postFolder}/${relativePath}`;
+
+      // 画像を中央に配置し、alt属性の説明文を下に表示する
+      const figure = document.createElement("figure");
+      figure.className = "article-image";
+
+      const parent = image.parentElement;
+      if (parent && parent.tagName === "P" && parent.childElementCount === 1 && parent.textContent.trim() === "") {
+        parent.replaceWith(figure);
+      } else {
+        image.replaceWith(figure);
+      }
+
+      figure.appendChild(image);
+
+      if (image.alt.trim()) {
+        const caption = document.createElement("figcaption");
+        caption.textContent = image.alt;
+        figure.appendChild(caption);
+      }
     });
 
     // 目次の生成
