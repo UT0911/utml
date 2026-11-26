@@ -50,6 +50,21 @@ async function showArticle(index) {
     const markdown = await response.text();
     const html = marked.parse(markdown);
 
+    // 記事タイトル・日付・カテゴリは投稿データから表示する
+    const articleMeta = document.getElementById("article-meta");
+    if (articleMeta) {
+      articleMeta.replaceChildren();
+
+      const title = document.createElement("h1");
+      title.textContent = post.title;
+
+      const details = document.createElement("p");
+      details.className = "article-meta";
+      details.textContent = `${post.date} / ${post.category}`;
+
+      articleMeta.append(title, details);
+    }
+
     articleContent.innerHTML = DOMPurify.sanitize(html);
 
     blogList.hidden = true;
