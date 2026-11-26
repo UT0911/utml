@@ -48,7 +48,8 @@ async function showArticle(index) {
     }
 
     const markdown = await response.text();
-    const html = marked.parse(markdown);
+    // [TOC] の位置に、記事内の h2・h3 見出しから目次を生成する
+    const html = marked.parse(markdown.replace(/^\\[TOC\\]\\s*$/m, "<div data-toc-placeholder></div>"));
 
     // 記事タイトル・日付・カテゴリは投稿データから表示する
     const articleMeta = document.getElementById("article-meta");
@@ -66,6 +67,47 @@ async function showArticle(index) {
     }
 
     articleContent.innerHTML = DOMPurify.sanitize(html);
+
+    // 目次の生成
+    const tocPlaceholder = articleContent.querySelector("[data-toc-placeholder]");
+    if (tocPlaceholder) {
+      const headings = [...articleContent.querySelectorAll("h2, h3")];
+
+      if (headings.length > 0) {
+        const toc = document.createElement("nav");
+        toc.className = "article-toc";
+        toc.setAttribute("aria-label", "目次");
+
+        const tocTitle = document.createElement("p");
+        tocTitle.className = "article-toc-title";
+        tocTitle.textContent = "目次";
+
+        const tocList = document.createElement("ol");
+        tocList.className = "article-toc-list";
+
+        headings.forEach((heading, headingIndex) => {
+          const id = `article-heading-${headingIndex + 1}`;
+          heading.id = id;
+
+          const item = document.createElement("li");
+          item.className = heading.tagName.toLowerCase() === "h3"
+            ? "article-toc-subitem"
+            : "article-toc-item";
+
+          const link = document.createElement("a");
+          link.href = `#${id}`;
+          link.textContent = heading.textContent;
+
+          item.appendChild(link);
+          tocList.appendChild(item);
+        });
+
+        toc.append(tocTitle, tocList);
+        tocPlaceholder.replaceWith(toc);
+      } else {
+        tocPlaceholder.remove();
+      }
+    }
 
     blogList.hidden = true;
     blogDetail.hidden = false;
