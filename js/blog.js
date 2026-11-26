@@ -74,6 +74,27 @@ async function showArticle(index) {
 
     articleContent.innerHTML = DOMPurify.sanitize(html);
 
+    // 画像パスは posts/<Markdownファイル名>/ を基準にする
+    const postFolder = post.file.replace(/\\.md$/i, "");
+    articleContent.querySelectorAll("img").forEach((image) => {
+      const source = image.getAttribute("src");
+      if (!source) return;
+
+      // 外部URL・サイト内絶対パス・ページ内リンクは変更しない
+      if (/^(?:https?:)?\\/\\//i.test(source) || source.startsWith("/") || source.startsWith("#")) {
+        return;
+      }
+
+      const relativePath = source.replace(/^\\.\\//, "");
+      const pathParts = relativePath.split("/");
+      if (pathParts.some((part) => part === ".." || part === "")) {
+        image.removeAttribute("src");
+        return;
+      }
+
+      image.src = `../posts/${postFolder}/${relativePath}`;
+    });
+
     // 目次の生成
     const tocPlaceholder = [...articleContent.querySelectorAll("p")].find(
       (element) => element.textContent.trim() === "BLOG_TOC_PLACEHOLDER_7F3A"
