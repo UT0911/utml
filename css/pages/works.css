@@ -1,13 +1,14 @@
 /* 制作物一覧 */
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
 }
 
 .work-card {
   padding: 0;
   overflow: hidden;
+  min-width: 0;
 }
 
 .work-image {
@@ -17,11 +18,11 @@
   background: #29394a;
 }
 
-.work-image.second {
+.work-image-2 {
   background: #303944;
 }
 
-.work-image.third {
+.work-image-3 {
   background: #3b3545;
 }
 
@@ -40,10 +41,20 @@
   margin-bottom: 8px;
 }
 
-.work-info p {
+.work-info > p:not(.eyebrow) {
   color: var(--sub-text);
   font-size: 13px;
   margin-bottom: 15px;
+}
+
+.work-info .eyebrow {
+  margin-bottom: 8px;
+}
+
+.work-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
 }
 
 .tag {
@@ -53,4 +64,18 @@
   border: 1px solid var(--border);
   border-radius: 3px;
   font-size: 11px;
+}
+
+@media (max-width: 700px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-image {
+    height: 160px;
+  }
+
+  .work-info {
+    padding: 20px;
+  }
 }
