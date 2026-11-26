@@ -107,6 +107,44 @@
   font-size: 0.85rem;
 }
 
+/* 自動生成目次 */
+.article-toc {
+  margin: 0 0 2.5em;
+  padding: 20px 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.article-toc-title {
+  margin: 0 0 10px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.article-toc-list {
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+.article-toc-list li {
+  margin: 4px 0;
+}
+
+.article-toc-list a {
+  color: var(--sub-text);
+  text-decoration: none;
+}
+
+.article-toc-list a:hover {
+  color: var(--primary);
+}
+
+.article-toc-subitem {
+  margin-left: 1em !important;
+  list-style-type: circle;
+}
+
 /* Markdown本文 */
 .markdown-content {
   line-height: 1.9;
@@ -122,7 +160,7 @@
 
 .markdown-content h1 {
   font-size: 2rem;
-  color: var(--primary);
+  color: var(--text);
 }
 
 .markdown-content h2 {
