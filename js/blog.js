@@ -74,6 +74,13 @@ async function showArticle(index) {
 
     articleContent.innerHTML = DOMPurify.sanitize(html);
 
+    // fenced code blocks (```) にシンタックスハイライトを適用
+    if (window.hljs) {
+      articleContent.querySelectorAll("pre code").forEach((block) => {
+        window.hljs.highlightElement(block);
+      });
+    }
+
     // 画像パスは posts/<Markdownファイル名>/ を基準にする
     const postFolder = post.file.replace(/\.md$/i, "");
     articleContent.querySelectorAll("img").forEach((image) => {
