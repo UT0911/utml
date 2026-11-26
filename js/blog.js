@@ -49,7 +49,7 @@ async function showArticle(index) {
 
     const markdown = await response.text();
     // [TOC] の位置に、記事内の h2・h3 見出しから目次を生成する
-    const html = marked.parse(markdown.replace(/^\\[TOC\\]\\s*$/m, "<div data-toc-placeholder></div>"));
+    const html = marked.parse(markdown.replace(/^\[TOC\]\s*$/m, "BLOG_TOC_PLACEHOLDER_7F3A"));
 
     // 記事タイトル・日付・カテゴリは投稿データから表示する
     const articleMeta = document.getElementById("article-meta");
@@ -69,7 +69,9 @@ async function showArticle(index) {
     articleContent.innerHTML = DOMPurify.sanitize(html);
 
     // 目次の生成
-    const tocPlaceholder = articleContent.querySelector("[data-toc-placeholder]");
+    const tocPlaceholder = [...articleContent.querySelectorAll("p")].find(
+      (element) => element.textContent.trim() === "BLOG_TOC_PLACEHOLDER_7F3A"
+    );
     if (tocPlaceholder) {
       const headings = [...articleContent.querySelectorAll("h2, h3")];
 
