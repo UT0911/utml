@@ -49,7 +49,7 @@ async function showArticle(index) {
 
     const markdown = await response.text();
     // [TOC] の位置に、記事内の h2・h3 見出しから目次を生成する
-    const html = marked.parse(markdown.replace(/^\\[TOC\\]\\s*$/m, "<div data-toc-placeholder></div>"));
+    const html = marked.parse(markdown.replace(/^\\[TOC\\]\s*$/m, "<div data-toc-placeholder></div>"));
 
     // 記事タイトル・日付・カテゴリは投稿データから表示する
     const articleMeta = document.getElementById("article-meta");
