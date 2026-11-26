@@ -87,6 +87,26 @@
   color: var(--bg);
 }
 
+/* 記事詳細のタイトル・メタ情報 */
+.article-detail-meta {
+  margin: 0 0 36px;
+  padding: 0 0 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.article-detail-meta h1 {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1.4;
+}
+
+.article-detail-meta .article-meta {
+  margin: 0;
+  color: var(--primary);
+  font-size: 0.85rem;
+}
+
 /* Markdown本文 */
 .markdown-content {
   line-height: 1.9;
