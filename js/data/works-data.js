@@ -2,30 +2,29 @@
 // 作品を追加するときは、この配列にオブジェクトを追加する。
 const works = [
   {
-    title: "Sorting Visualizer",
-    category: "WEB APPLICATION",
+    title: "UTLibrary",
+    category: "LIBRARY",
     description:
-      "バブルソートやクイックソートなどのソートアルゴリズムを、ステップごとに視覚的に確認できるツール。",
-    technologies: ["JavaScript", "HTML", "CSS"],
+      "競技プログラミングで使っている関数等をライブラリ形式でまとめています。",
+    technologies: ["C++"],
     featured: true,
-    url: "",
+    url: "https://ut0911.github.io/UTLibrary/",
   },
   {
-    title: "Grid Visualizer",
-    category: "VISUALIZATION",
-    description:
-      "グリッド上の移動や経路、スコアなどを視覚的に確認するためのツール。",
-    technologies: ["JavaScript", "HTML", "CSS"],
+    title: "UT-emojicode-lib",
+    category: "LIBRARY",
+    description: "emojicodeで使える関数やデータ構造をまとめています。",
+    technologies: ["emojicode"],
     featured: true,
-    url: "",
+    url: "https://github.com/UT0911/UT-emojicode-lib",
   },
   {
-    title: "Clicker Game",
-    category: "GAME DEVELOPMENT",
+    title: "ホームページ",
+    category: "WEB",
     description:
-      "C++とDxLibを使った、クリックによるポイント獲得や自動生産などの要素を持つゲーム。",
-    technologies: ["C++", "DxLib"],
-    featured: false,
-    url: "",
+      "あなたが今閲覧しているサイトです。ChatGPTを使って作成しています。",
+    technologies: ["HTML", "CSS", "JavaScript", "ChatGPT"],
+    featured: true,
+    url: "https://ut0911.github.io/utml/",
   },
 ];
