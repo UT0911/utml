@@ -3,9 +3,9 @@
 const posts = [
   {
     title: "ホームページを作りました",
-    date: "2026-11-23",
-    category: "test",
+    date: "2026-11-26",
+    category: "blog",
     description: "ホームページができるまで",
-    file: "madeHomepage.md",
+    file: "0001.md",
   },
 ];
