@@ -49,7 +49,9 @@ async function showArticle(index) {
 
     const markdown = await response.text();
     // [TOC] の位置に、記事内の h2・h3 見出しから目次を生成する
-    const html = marked.parse(markdown.replace(/^\[TOC\]\s*$/m, "BLOG_TOC_PLACEHOLDER_7F3A"));
+    const html = marked.parse(
+      markdown.replace(/^\[TOC\]\s*$/m, "BLOG_TOC_PLACEHOLDER_7F3A"),
+    );
 
     // 記事タイトル・日付・カテゴリは投稿データから表示する
     const articleMeta = document.getElementById("article-meta");
@@ -70,7 +72,7 @@ async function showArticle(index) {
 
     // 目次の生成
     const tocPlaceholder = [...articleContent.querySelectorAll("p")].find(
-      (element) => element.textContent.trim() === "BLOG_TOC_PLACEHOLDER_7F3A"
+      (element) => element.textContent.trim() === "BLOG_TOC_PLACEHOLDER_7F3A",
     );
     if (tocPlaceholder) {
       const headings = [...articleContent.querySelectorAll("h2, h3")];
@@ -84,7 +86,7 @@ async function showArticle(index) {
         tocTitle.className = "article-toc-title";
         tocTitle.textContent = "目次";
 
-        const tocList = document.createElement("ol");
+        const tocList = document.createElement("ul");
         tocList.className = "article-toc-list";
 
         headings.forEach((heading, headingIndex) => {
@@ -92,9 +94,10 @@ async function showArticle(index) {
           heading.id = id;
 
           const item = document.createElement("li");
-          item.className = heading.tagName.toLowerCase() === "h3"
-            ? "article-toc-subitem"
-            : "article-toc-item";
+          item.className =
+            heading.tagName.toLowerCase() === "h3"
+              ? "article-toc-subitem"
+              : "article-toc-item";
 
           const link = document.createElement("a");
           link.href = `#${id}`;
